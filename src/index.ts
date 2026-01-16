@@ -17,6 +17,10 @@ app.use("/auth", auth);
 app.use("/tasks", tasks);
 app.use("/withdraw", withdraw);
 
+app.get("/", (_, res) => {
+  res.send("✅ MBux-style backend is running!");
+});
+
 const PORT = 3000;
 
 app.listen(PORT, "127.0.0.1", () => {
