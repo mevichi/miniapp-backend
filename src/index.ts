@@ -17,6 +17,10 @@ app.use("/auth", auth);
 app.use("/tasks", tasks);
 app.use("/withdraw", withdraw);
 
+app.use((req, res) => { 
+    res.status(200).send("Money Mini App Backend");
+})
+
 const PORT = 3000;
 
 app.listen(PORT, "127.0.0.1", () => {
