@@ -4,6 +4,11 @@ import { users } from "../store";
 
 const router = Router();
 
+router.get("/", (_, res) => {   
+    res.send("Auth route is working");
+})
+
+
 router.post("/", (req, res) => {
   const { initData, ref } = req.body;
 
